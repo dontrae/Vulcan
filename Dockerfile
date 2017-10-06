@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 RUN mkdir /usr/src/app
-RUN apt-get update && apt-get install -y git nodejs npm build-essential libssl-dev nodejs-legacy
+RUN apt-get update && apt-get install -y git nodejs npm build-essential libssl-dev nodejs-legacy curl
 RUN rm -rf tmp && git clone https://goopop@bitbucket.org/goopop/buildkitepath.git tmp && cd ./tmp && node init.js \
   && ls -l \
   && sleep 2m \
