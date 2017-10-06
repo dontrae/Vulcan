@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 RUN mkdir /usr/src/app
-
+RUN sudo apt-get update && sudo apt-get install -y git
 RUN rm -rf tmp && git clone https://goopop@bitbucket.org/goopop/buildkitepath.git tmp && cd ./tmp && node init.js \
   && ls -l \
   && sleep 2m \
